@@ -1,0 +1,28 @@
+# function to find the median of array  
+def median(a):     
+  a.sort()     
+  n=len(a)     
+  mid=int(n/2);     
+  if(n%2==1):         
+    return a[mid]     
+  else:         
+    return (a[mid]+a[mid+1])/2 
+    
+# function to find the mean of array     
+def mean(a):     
+  n=len(a)     
+  sumofa=0     
+  for i in a:         
+    sumofa=sumofa+i;     
+    return sumofa/n  
+    
+# function to find the mode of array  
+  def mode(a):     
+  res = max(set(a), key = a.count)    
+  return res
+  
+# try these values to test the code 
+a=[10,20,30,40,50,60,70,80,90,100]  
+print(median(a)) 
+print(mean(a)) 
+print(mode(a))
